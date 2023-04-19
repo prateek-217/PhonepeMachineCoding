@@ -1,4 +1,4 @@
-package org.phonepe;
+package org.phonepe.device;
 
 import org.phonepe.app.App;
 import org.phonepe.constants.OsName;

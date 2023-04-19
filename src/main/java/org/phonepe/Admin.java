@@ -1,9 +1,10 @@
-package org.phonepe.rollout;
+package org.phonepe;
 
-import org.phonepe.Device;
+import org.phonepe.device.Device;
 import org.phonepe.app.App;
 import org.phonepe.constants.OsName;
 import org.phonepe.constants.RolloutStrategy;
+import org.phonepe.device.DeviceManager;
 import org.phonepe.versionControl.VersionControl;
 
 import java.nio.charset.StandardCharsets;

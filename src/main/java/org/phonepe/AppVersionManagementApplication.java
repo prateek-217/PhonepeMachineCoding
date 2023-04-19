@@ -2,8 +2,8 @@ package org.phonepe;
 
 import org.phonepe.constants.OsName;
 import org.phonepe.constants.RolloutStrategy;
-import org.phonepe.rollout.Admin;
-import org.phonepe.rollout.DeviceManager;
+import org.phonepe.device.Device;
+import org.phonepe.device.DeviceManager;
 
 public class AppVersionManagementApplication {
     public static void main(String[] args) {

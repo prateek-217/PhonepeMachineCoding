@@ -1,6 +1,6 @@
-package org.phonepe.rollout;
+package org.phonepe.device;
 
-import org.phonepe.Device;
+import org.phonepe.device.Device;
 
 import java.util.ArrayList;
 import java.util.List;
