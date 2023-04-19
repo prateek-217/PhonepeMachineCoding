@@ -1,4 +1,4 @@
-package org.example;
+package org.phonepe;
 
 public class Main {
     public static void main(String[] args) {
