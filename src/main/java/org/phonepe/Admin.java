@@ -56,14 +56,12 @@ public class Admin {
     }
 
     private boolean checkForUpdate(App app, Device device) {
-        return device.getAppToVersionMap().get(app.getAppName()) != null
-                && device.getAppToVersionMap().getOrDefault(app.getAppName(), 0) < app.getAppMetaData().getVersion()
+        return device.getAppToVersionMap().getOrDefault(app.getAppName(), 0) < app.getAppMetaData().getVersion()
                 && device.getAppToVersionMap().getOrDefault(app.getAppName(), 0) - app.getAppMetaData().getVersion() < maxVersionDiff;
     }
 
     private boolean checkForInstall(App app, Device device) {
-        return device.getAppToVersionMap().get(app.getAppName()) != null
-                && device.getAppToVersionMap().getOrDefault(app.getAppName(), 0) < app.getAppMetaData().getVersion()
+        return device.getAppToVersionMap().getOrDefault(app.getAppName(), 0) < app.getAppMetaData().getVersion()
                 && device.getAppToVersionMap().getOrDefault(app.getAppName(), 0) - app.getAppMetaData().getVersion() > maxVersionDiff;
     }
 
@@ -97,6 +95,9 @@ public class Admin {
                 break;
             case PERCENTAGE:
                     int rolloutSize = DeviceManager.getDeviceList().size()*rolloutPercentage/100;
+                    if(rolloutSize == 0) {
+                        rolloutSize = DeviceManager.getDeviceList().size();
+                    }
                     for (int i = appRollOutSizeMap.getOrDefault(appName, 0); i < rolloutSize; i++) {
                         rolloutUpdate(appName, DeviceManager.getDeviceList().get(i));
                     }

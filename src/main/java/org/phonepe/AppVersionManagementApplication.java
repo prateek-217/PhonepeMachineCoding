@@ -12,5 +12,7 @@ public class AppVersionManagementApplication {
         admin.uploadNewVersion("Phonepe", 1, OsName.ANDROID, "dummy Release Notes", 1);
         admin.releaseNewVersion("Phonepe", RolloutStrategy.BETA);
         admin.releaseNewVersion("Phonepe", RolloutStrategy.PERCENTAGE);
+
+
     }
 }
